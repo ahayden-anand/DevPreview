@@ -5,6 +5,10 @@
   "publisher": "AHAYDENANAND",
   "version": "0.0.2",
   "icon": "images/icon.png",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/ahayden-anand/DevPreview.git"
+},
   "engines": {
     "vscode": "^1.90.0"
   },
