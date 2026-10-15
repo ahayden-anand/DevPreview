@@ -1,0 +1,59 @@
+{
+  "name": "devpreview",
+  "displayName": "DevPreview",
+  "description": "Instantly preview React components inside VS Code.",
+  "publisher": "AHAYDENANAND",
+  "version": "0.0.2",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "devpreview.previewComponent",
+        "title": "DevPreview: Preview Component"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "devpreview.previewComponent",
+          "when": "resourceExtname == .tsx || resourceExtname == .jsx"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "devpreview.previewComponent",
+          "when": "resourceExtname == .tsx || resourceExtname == .jsx"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "~1.90.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.13.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "dependencies": {
+    "@babel/parser": "^8.0.7"
+  }
+}
